@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_profile/Screen/gallery_screen.dart';
 import 'package:my_profile/Screen/profile_screen.dart';
 import 'package:my_profile/screen/gallery_screen.dart';
-import 'package:my_profile/screen/profile_screen.dart';
+
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
