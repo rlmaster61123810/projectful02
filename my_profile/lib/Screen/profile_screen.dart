@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class ProfileScreen extends StatelessWidget {
   static final String path = "lib/src/pages/profile/profile1.dart";
   @override
@@ -36,19 +37,8 @@ class ProfileScreen extends StatelessWidget {
                       backgroundColor: Colors.red.shade600,
                     ),
                     CircleAvatar(
-                      minRadius: 60,
-                      backgroundColor: Colors.deepOrange.shade300,
-                      child: CircleAvatar(
-                        minRadius: 50,
-                      ),
-                    ),
-                    CircleAvatar(
-                      child: Icon(
-                        Icons.message,
-                        size: 30.0,
-                      ),
-                      minRadius: 30.0,
-                      backgroundColor: Colors.red.shade600,
+                      backgroundImage: AssetImage('assets/images/cat.jpg'),
+                      radius: 50,
                     ),
                   ],
                 ),
@@ -119,7 +109,7 @@ class ProfileScreen extends StatelessWidget {
               style: TextStyle(color: Colors.deepOrange, fontSize: 12.0),
             ),
             subtitle: Text(
-              "ram@kumar.com",
+              "จ๊ะเอ๋ตัวเอง.com",
               style: TextStyle(fontSize: 18.0),
             ),
           ),
@@ -130,7 +120,7 @@ class ProfileScreen extends StatelessWidget {
               style: TextStyle(color: Colors.deepOrange, fontSize: 12.0),
             ),
             subtitle: Text(
-              "+977 9818225533",
+              "191",
               style: TextStyle(fontSize: 18.0),
             ),
           ),
@@ -141,7 +131,7 @@ class ProfileScreen extends StatelessWidget {
               style: TextStyle(color: Colors.deepOrange, fontSize: 12.0),
             ),
             subtitle: Text(
-              "@ramkumar",
+              "@ศาสดา",
               style: TextStyle(fontSize: 18.0),
             ),
           ),
@@ -152,7 +142,7 @@ class ProfileScreen extends StatelessWidget {
               style: TextStyle(color: Colors.deepOrange, fontSize: 12.0),
             ),
             subtitle: Text(
-              "facebook.com/ramkumar",
+              "facebook.com/ธัมมะกระตุกจิต",
               style: TextStyle(fontSize: 18.0),
             ),
           ),
