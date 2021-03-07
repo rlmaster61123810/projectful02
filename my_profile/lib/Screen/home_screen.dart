@@ -1,5 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_profile/Screen/gallery_screen.dart';
+import 'package:my_profile/Screen/profile_screen.dart';
+import 'package:my_profile/screen/gallery_screen.dart';
+import 'package:my_profile/screen/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -9,34 +12,38 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int currentIndex = 0;
+  int _currentIndex = 0;
 
-  var Page =[
+  var pages = [
     ProfileScreen(),
-    Gallery
-
+    GalleryScreen(),
   ];
+
+  _setCurrentIndex(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        body: Center(
-          child: Text(
-            "Home Page"
-            ), 
-            bottomNavigationBar: BottomNavigationBar(
-             item: [
-              BottomNavigationBarItem
-             icon: Icon(Icons.people),
-             lable: "profile"
+        body: pages[_currentIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          onTap: _setCurrentIndex,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.people),
+              label: "profile",
             ),
-            BottomNavigationBarItem
-            BottomNavigationBarItem
-            icon: Icon(Icons.Icons.photo_album)
-            ]
+            BottomNavigationBarItem(
+              icon: Icon(Icons.photo_album),
+              label: "Gallery",
             ),
-            ),
-            ),
+          ],
+        ),
+      ),
     );
   }
 }
